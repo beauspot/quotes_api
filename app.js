@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const QuotesRoute = require("./routes/Quotes");
 
 
-// Setting up db connection
+// Setting up nosql db connection
 mongoose.connect("mongodb://localhost/motivation");
 
 // testing connection
