@@ -6,7 +6,7 @@ const {
   post_quote_route,
   get_specific_quote_route,
   delete_quote_route,
-  updat_quote_route,
+  update_quote_route,
   get_random_quote_route,
 } = require("../controllers/quotes_ctrl");
 
@@ -23,7 +23,7 @@ router.get("/get/:id", get_specific_quote_route);
 router.delete("/delete/:id", delete_quote_route);
 
 // update a specific quotes
-router.patch("/update/:id", updat_quote_route);
+router.patch("/update/:id", update_quote_route);
 
 // getting a randome quote
 router.get("/random", get_random_quote_route);

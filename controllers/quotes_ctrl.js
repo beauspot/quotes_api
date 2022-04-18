@@ -30,7 +30,7 @@ const delete_quote_route = async (req, res) => {
 };
 
 // update a specific quotes
-const updat_quote_route = async (req, res) => {
+const update_quote_route = async (req, res) => {
   const q = await Quote.updateOne({ _id: req.params.id }, { $set: req.body });
   res.json(q);
 };
@@ -48,6 +48,6 @@ module.exports = {
   post_quote_route,
   get_specific_quote_route,
   delete_quote_route,
-  updat_quote_route,
+  update_quote_route,
   get_random_quote_route,
 };

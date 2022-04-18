@@ -15,12 +15,10 @@ db.once("open", () => {
 
 // middleware
 app.use(bodyParser.json());
+
+// Quotes routes
 app.use("/quotes", QuotesRoute);
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Welcome to the Quote route.");
-});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
